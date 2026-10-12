@@ -1,0 +1,81 @@
+@use '../abstracts' as *;
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 24px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  border: 1px solid var(--line);
+  background: #f1f3f5;
+  color: var(--muted);
+  font: 700 12px/1 $font-display;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.chip i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.chip-open {
+  background: #e8f5e9;
+  color: #1e7e34;
+  border-color: #c8e6c9;
+}
+
+.chip-soon {
+  background: #fff8e1;
+  color: #b26b00;
+  border-color: #ffe082;
+}
+
+.chip-closed {
+  background: #f1f3f5;
+  color: var(--muted);
+  border-color: var(--line);
+}
+
+.chip-blue {
+  background: #d5e3ff;
+  color: var(--blue);
+  border-color: #c3d4f0;
+}
+
+.chip-navy {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+.chip-red {
+  background: #fde8eb;
+  color: var(--red);
+  border-color: #f5c2ca;
+}
+
+.chip-neutral {
+  background: var(--pale);
+  color: var(--ink);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.day-chip {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: #d5e3ff;
+  color: var(--blue);
+  font: 600 12px/1.2 $font-display;
+  letter-spacing: 0.02em;
+}

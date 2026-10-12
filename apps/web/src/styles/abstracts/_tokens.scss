@@ -1,0 +1,21 @@
+// Design tokens. These are the single source of truth: `base/_root.scss`
+// publishes them as CSS custom properties for the runtime, and the partials
+// use the Sass variables directly where a static value is enough.
+
+// Brand palette
+$navy: #10263a;
+$blue: #072f59;
+$red: #d71935;
+$ink: #102338;
+$muted: #6f7b8a;
+$line: #dbe1e7;
+$pale: #eef3f6;
+
+// Typography
+$font-body: "Inter", Arial, sans-serif;
+$font-condensed: "Roboto Condensed", "Arial Narrow", sans-serif;
+$font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+
+// Layout
+$container-max: 1328px;
+$container-gutter: 112px;

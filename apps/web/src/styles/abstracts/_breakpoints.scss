@@ -1,0 +1,37 @@
+// Layout breakpoints and the mixins that wrap them, so a width is changed in
+// one place rather than in every media query that mentions it.
+
+$bp-wide: 1600px;   // extra-wide desktop
+$bp-desktop: 1320px; // below the maximum container width
+$bp-laptop: 1150px;
+$bp-tablet: 980px;   // desktop navigation gives way to the mobile menu
+$bp-mobile: 720px;
+$bp-small: 360px;
+
+/// Styles that apply up to and including the given width.
+@mixin to($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+/// Styles that apply from the given width upwards.
+@mixin from($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+/// Styles for a closed range, e.g. desktop widths below the laptop cut-off.
+@mixin between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+/// Honours the visitor's reduced-motion preference.
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

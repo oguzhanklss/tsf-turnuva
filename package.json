@@ -1,0 +1,19 @@
+{
+  "name": "tsf-turnuva",
+  "private": true,
+  "description": "Türkiye Satranç Federasyonu turnuva başvuru portalı — pnpm + turbo monorepo",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4"
+  },
+  "packageManager": "pnpm@10.28.2",
+  "engines": {
+    "node": ">=24.0.0 <25",
+    "pnpm": ">=10.28.2"
+  }
+}

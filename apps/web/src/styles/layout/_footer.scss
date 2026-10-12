@@ -1,0 +1,107 @@
+/* Footer and search */
+.footer {
+  background: var(--navy);
+  padding: 57px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1.1fr 1.1fr;
+  gap: 45px;
+  padding-bottom: 48px;
+}
+
+.footer .brand {
+  gap: 11px;
+}
+
+.footer .brand > img {
+  width: 57px;
+  height: 57px;
+}
+
+.footer .brand strong {
+  font-size: 17px;
+}
+
+.footer .brand small {
+  font-size: 13px;
+  color: #a5b3bf;
+}
+
+.footer-brand > p {
+  font-size: 11px;
+  line-height: 1.85;
+  color: #a9b7c4;
+  margin: 23px 0 14px;
+}
+
+.footer-brand > a {
+  font-size: 12px;
+  color: #c3d0db;
+}
+
+.socials {
+  display: flex;
+  gap: 19px;
+  margin-top: 23px;
+}
+
+.socials a {
+  opacity: 0.65;
+}
+
+.socials a:hover {
+  opacity: 1;
+}
+
+.socials .icon {
+  height: 19px;
+  width: 19px;
+}
+
+.footer-grid > div > h3 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin: 6px 0 22px;
+}
+
+.footer-grid > div:not(:first-child) > a {
+  display: block;
+  color: #b8c7d3;
+  font-size: 12px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.footer-grid > div:not(:first-child) > a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #314555;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 11px;
+  color: #9eb0be;
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.footer-legal a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-legal > span {
+  opacity: 0.6;
+}

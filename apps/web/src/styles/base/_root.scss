@@ -1,0 +1,21 @@
+@use 'sass:meta';
+@use '../abstracts' as *;
+
+// Document defaults, plus the palette published for runtime use in `var()`.
+:root {
+  font-family: $font-body;
+  color: $ink;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --navy: #{$navy};
+  --blue: #{$blue};
+  --red: #{$red};
+  --ink: #{$ink};
+  --muted: #{$muted};
+  --line: #{$line};
+  --pale: #{$pale};
+  --condensed: #{meta.inspect($font-condensed)};
+}

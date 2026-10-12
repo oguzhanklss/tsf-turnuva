@@ -1,0 +1,207 @@
+@use '../abstracts' as *;
+
+.filter-panel {
+  display: grid;
+  gap: 14px;
+  padding: 20px;
+  margin-bottom: 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.filter-top {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 14px;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 4px;
+  min-height: 46px;
+  padding: 0 14px;
+}
+
+.search-field:focus-within {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--blue);
+}
+
+.search-field input {
+  min-width: 0;
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: var(--ink);
+  padding: 12px 0;
+}
+
+.search-field input::placeholder {
+  color: #8a94a0;
+}
+
+.search-field > .icon {
+  opacity: 0.6;
+}
+
+.select-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0 0 0 14px;
+  min-height: 46px;
+}
+
+.select-field > .icon {
+  opacity: 0.6;
+}
+
+.select-field select {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: #fff url('../../../public/assets/icons/caret-down.svg') right 13px center/14px no-repeat;
+  appearance: none;
+  padding: 10px 40px 10px 4px;
+  font-size: 14px;
+  color: var(--ink);
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.select-field select:focus {
+  outline: none;
+}
+
+.select-field:focus-within {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--blue);
+}
+
+.filter-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.view-switch {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.view-switch button {
+  width: 34px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.view-switch button.active {
+  background: var(--blue);
+}
+
+.view-switch button.active .icon {
+  filter: brightness(0) invert(1);
+}
+
+.list-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.list-summary > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.list-summary i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1e7e34;
+}
+
+.list-summary b {
+  color: var(--ink);
+}
+
+.list-summary .select-field {
+  min-height: 38px;
+  font-size: 13px;
+}
+
+.list-summary .select-field select {
+  font-size: 13px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.pagination nav {
+  display: flex;
+  gap: 4px;
+}
+
+.pagination nav a, .pagination nav button, .pagination nav span {
+  min-width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  font: 700 13px/1 $font-display;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.pagination nav .active {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}

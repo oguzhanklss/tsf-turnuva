@@ -1,0 +1,34 @@
+// Entry point for the design system, carried over from tsf-web.
+//
+// The order below is the cascade: tokens and base first, then the chrome,
+// then the components and pages, then the responsive layer that overrides
+// them. Do not reorder these lines.
+
+// Base
+@use 'base/fonts';
+@use 'base/root';
+@use 'base/reset';
+@use 'base/shared';
+
+// Layout
+@use 'layout/header';
+@use 'layout/footer';
+
+// Components
+@use 'components/chips';
+@use 'components/tournament-card';
+@use 'components/data-table';
+@use 'components/forms';
+@use 'components/alerts';
+@use 'components/panels';
+
+// Pages
+@use 'pages/home';
+@use 'pages/tournaments';
+@use 'pages/tournament-detail';
+@use 'pages/registration';
+@use 'pages/calendar';
+@use 'pages/regulation';
+
+// Responsive layer
+@use 'responsive/breakpoints';

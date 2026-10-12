@@ -1,0 +1,109 @@
+@use '../abstracts' as *;
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 28px;
+  align-items: start;
+  padding: 32px 0 56px;
+}
+
+.detail-main {
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+}
+
+.detail-cover {
+  position: relative;
+  min-height: 240px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #10263a 0%, #072f59 55%, #1b4a7a 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  color: #fff;
+}
+
+.detail-cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(45deg, rgba(255, 255, 255, 0.06) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.06) 75%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.06) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.06) 75%);
+  background-size: 64px 64px;
+  background-position: 0 0, 32px 32px;
+  opacity: 0.6;
+}
+
+.detail-cover > * {
+  position: relative;
+}
+
+.detail-cover .cover-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.detail-cover .cover-copy b {
+  font: 700 20px/1.2 $font-display;
+  text-transform: uppercase;
+}
+
+.detail-cover .cover-tags {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.detail-cover .chip {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.schedule-table td:first-child {
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.schedule-table .time {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--muted);
+}
+
+.schedule-table .final {
+  background: #eef4fb;
+}
+
+.schedule-table .final td {
+  font-weight: 600;
+}
+
+.participants-table .mask {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.regulation-excerpt {
+  display: grid;
+  gap: 16px;
+}
+
+.regulation-excerpt .soft-note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.regulation-excerpt .soft-note .icon {
+  opacity: 0.6;
+  margin-top: 2px;
+}
